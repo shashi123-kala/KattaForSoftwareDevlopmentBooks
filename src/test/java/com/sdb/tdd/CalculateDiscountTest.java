@@ -15,16 +15,15 @@ public class CalculateDiscountTest {
 	public static final String SOFTWARE_DEVELOPMENT_BOOK_III = "Clean Architecture (Robert Martin, 2017)";
 	public static final String SOFTWARE_DEVELOPMENT_BOOK_IV = "Test Driven Development by Example (Kent Beck, 2003)";
 	public static final String SOFTWARE_DEVELOPMENT_BOOK_V = "Working Effectively With Legacy Code (Michael C. Feathers, 2004)";
+	CalculateDiscount calculateDiscount = new CalculateDiscount();
 
 	@Test
 	public void initializeToBuyBook() {
-		CalculateDiscount calculateDiscount = new CalculateDiscount();
 		assertNotNull(calculateDiscount);
 	}
 
 	@Test
 	public void buyingOneBook() {
-		CalculateDiscount calculateDiscount = new CalculateDiscount();
 		String book = SOFTWARE_DEVELOPMENT_BOOK_I;
 		double discount = 0.00;
 		int noOfBooks = 1;
@@ -33,7 +32,6 @@ public class CalculateDiscountTest {
 
 	@Test
 	public void buyingTwoCopiesOfDifferentBook() {
-		CalculateDiscount calculateDiscount = new CalculateDiscount();
 		List<String> sdbList = new ArrayList<>();
 		String book = SOFTWARE_DEVELOPMENT_BOOK_I;
 		String book2 = SOFTWARE_DEVELOPMENT_BOOK_II;
@@ -46,7 +44,6 @@ public class CalculateDiscountTest {
 
 	@Test
 	public void buyingThreeCopiesOfDifferentBook() {
-		CalculateDiscount calculateDiscount = new CalculateDiscount();
 		List<String> sdbList = new ArrayList<>();
 		String book = SOFTWARE_DEVELOPMENT_BOOK_I;
 		String book2 = SOFTWARE_DEVELOPMENT_BOOK_II;
