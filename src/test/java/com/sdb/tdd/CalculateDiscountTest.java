@@ -3,6 +3,9 @@ package com.sdb.tdd;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.junit.jupiter.api.Test;
 
 public class CalculateDiscountTest {
@@ -26,6 +29,19 @@ public class CalculateDiscountTest {
 		double discount = 0.00;
 		int noOfBooks = 1;
 		assertEquals(50.0, calculateDiscount.getTotalPrice(discount, noOfBooks));
+	}
+
+	@Test
+	public void buyingTwoCopiesOfDifferentBook() {
+		CalculateDiscount calculateDiscount = new CalculateDiscount();
+		List<String> sdbList = new ArrayList<>();
+		String book = SOFTWARE_DEVELOPMENT_BOOK_I;
+		String book2 = SOFTWARE_DEVELOPMENT_BOOK_II;
+		double discount = 5;
+		sdbList.add(book);
+		sdbList.add(book2);
+		int noOfBooks = sdbList.size();
+		assertEquals(95.0, calculateDiscount.getTotalPrice(discount, noOfBooks));
 	}
 
 }
